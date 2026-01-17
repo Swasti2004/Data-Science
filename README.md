@@ -1,5 +1,2 @@
-hry
-
-bjsd
-
-kjbskjbvkjs
+hey all,  
+here i am documenting my journey to learn data science .
