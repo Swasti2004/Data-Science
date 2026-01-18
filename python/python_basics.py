@@ -131,3 +131,31 @@
 # empty_tuple = tuple()
 # empty_set = set()
 # empty_set = {}  # This creates an empty dictionary, not a set
+
+
+# dicionary
+student={'name': 'John', 'age': 25, 'courses': ['Math', 'CompSci']}
+print(student)
+print(student['name'])  # John
+print(student['courses'])  # ['Math', 'CompSci']
+print(student.get('age'))  # 25
+# default get value
+print(student.get('phone', 'Not Found'))  # Not Found
+# update dictionary
+student['age'] = 26
+student.update({'name': 'Jane', 'phone': '555-5555'})
+print(student)  # {'name': 'Jane', 'age': 26, 'courses': ['Math', 'CompSci'], 'phone': '555-5555'}
+# delete
+del student['age']
+print(student)  # {'name': 'Jane', 'courses': ['Math', 'CompSci'], 'phone': '555-5555'}
+age = student.pop('age', 'Not Found')
+print(age)  # Not Found
+print(student)  # {'name': 'Jane', 'courses': ['Math', 'CompSci'], 'phone': '555-5555'}
+print(len(student))  # 3
+print(student.keys())  # dict_keys(['name', 'courses', 'phone'])
+print(student.values())  # dict_values(['Jane', ['Math', 'CompSci'], '555-5555'])
+print(student.items())  # dict_items([('name', 'Jane'), ('courses', ['Math', 'CompSci']), ('phone', '555-5555')])
+
+# loop through dictionary
+for key, value in student.items():
+    print(key, value)
